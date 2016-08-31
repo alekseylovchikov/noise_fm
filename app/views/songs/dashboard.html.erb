@@ -1,0 +1,49 @@
+<div id="noise-show">
+  <div id="show-banner">
+    <div class="wrapper-skinny">
+      <h1><%= @song.title %>></h1>
+    </div>
+  </div>
+
+  <div id="links">
+    <div class="wrapper-skinny">
+      <ul>
+        <li class="current">Songs</li>
+        <li><a href="#">New Song</a></li>
+        <li><%= link_to 'Account Settings', edit_song_registration_path %></li>
+        <li><a href="#">View Song</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="songs">
+    <div class="wrapper-skinny">
+      <ul class="cf">
+        <% @noises.each do |noise| %>
+          <li class="cf">
+            <div class="song-thumbnail">
+              <%= link_to song_noise_path(@song, noise) do %>
+                <img src="assets/img/thep_ep.jpg" alt="">
+              <% end %>
+            </div>
+            <div class="song-overview">
+              <h2><%= link_to noise.title, song_noise_path(@song, noise) %></h2>
+              <p class="description"><%= truncate(noise.description, length: 160) %></p>
+              <div class="auth-links">
+                <%= link_to 'Edit', edit_song_noise_path(@song, noise) %>
+                <%= link_to 'Delete', song_noise_path(@song, noise), method: :delete, data: {confirm: 'Are you sure?'} %>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="pagination">
+  <span class="prev-page disabled">Previous</span>
+  <em class="current">1</em>
+  <a href="#">2</a>
+  <a class="next-page" href="#">Next</a>
+</div>

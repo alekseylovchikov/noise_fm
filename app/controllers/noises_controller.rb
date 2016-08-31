@@ -1,6 +1,6 @@
 class NoisesController < ApplicationController
   before_action :find_song
-  before_action :find_noise, only: [:show]
+  before_action :find_noise, only: [:show, :destroy, :edit, :update]
 
   def new
     @noise = @song.noises.new
@@ -16,8 +16,26 @@ class NoisesController < ApplicationController
     end
   end
 
+  def edit
+
+  end
+
+  def update
+    if @noise.update(noise_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
   def show
     @noises = Noise.where(song_id: @song).order("created_at DESC").reject { |e| e.id == @noise.id }
+  end
+
+  def destroy
+    if @noise.destroy
+      redirect_to root_path
+    end
   end
 
   private
