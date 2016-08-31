@@ -1,6 +1,6 @@
 class NoisesController < ApplicationController
   before_action :authenticate_song!, except: [:show]
-  before_filter :require_permission
+  before_filter :require_permission, except: [:show]
   before_action :find_song
   before_action :find_noise, only: [:show, :destroy, :edit, :update]
 
