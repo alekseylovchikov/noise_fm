@@ -21,7 +21,7 @@ class NoisesController < ApplicationController
 
   def update
     if @noise.update(noise_params)
-      redirect_to song_noise_path(@song, @noise)
+      redirect_to song_noise_path(@song, @noise), notice: 'Your song successfully updated.'
     else
       render :edit
     end

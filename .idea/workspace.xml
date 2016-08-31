@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e163b3cc-7c80-4fb4-92af-7c3abb3a44b6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/noises.coffee" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/noises_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/noises_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_links.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_links.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/noises/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/noises/edit.html.erb" />
     </list>
     <ignored path="noise_fm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/noises_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+              <caret line="23" column="90" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -342,12 +336,12 @@
       <option name="presentableId" value="Default" />
       <updated>1472649028309</updated>
       <workItem from="1472649029828" duration="835000" />
-      <workItem from="1472657702614" duration="5988000" />
+      <workItem from="1472657702614" duration="6068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6823000" />
+    <option name="totallyTimeSpent" value="6903000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1282" height="999" extended-state="6" />
@@ -506,7 +500,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/noises_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+          <caret line="23" column="90" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
           <folding />
         </state>
       </provider>
