@@ -3,12 +3,39 @@ $primary-color: #b13383;
 $dark: #232323;
 $amount: 7.5%;
 $light: #EDEFF5;
+$alert: #f94c4c;
 
 @import 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,500i';
 
 body {
  font-family: 'Roboto', 'Arial', 'Ubuntu', sans-serif;
  color: $dark;
+}
+
+.notice {
+  position: absolute;
+  top: 0;
+  left: -500px;
+  transform: translate(-50%, 0);
+  font-weight: 500;
+  font-size: 2rem;
+  background-color: $primary-color;
+  color: $white;
+  padding: 8px;
+  opacity: .9;
+}
+
+.alert {
+  position: absolute;
+  top: 0;
+  left: -500px;
+  transform: translate(-50%, 0);
+  font-weight: 500;
+  font-size: 2rem;
+  background-color: $alert;
+  color: $white;
+  padding: 8px;
+  opacity: .9;
 }
 
 .active {

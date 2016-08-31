@@ -14,3 +14,28 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  var notice = $('p.notice');
+  var alert = $('p.alert');
+
+  alert.animate({
+    left: '50%'
+  }, 500, function() {
+    alert.animate({
+      opacity: 0
+    }, 3000, function() {
+      alert.remove();
+    });
+  });
+
+  notice.animate({
+    left: '50%'
+  }, 500, function() {
+    notice.animate({
+      opacity: 0
+    }, 3000, function() {
+      notice.remove();
+    });
+  });
+});
