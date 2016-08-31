@@ -25,7 +25,7 @@
 
   <div id="song-content">
     <div class="wrapper-skinny">
-      <img class="current-song-thumbnail" src="assets/img/thep_ep.jpg" alt="">
+      <%= image_tag @noise.thumbnail.url(:medium), class: 'current-song-thumbnail' %>
       <h2><%= @noise.title %></h2>
       <p class="description"><%= @noise.description %></p>
     </div>
@@ -38,7 +38,7 @@
           <li class="cf">
             <div class="song-thumbnail">
               <%= link_to song_noise_path(@song, noise) do %>
-                <img src="assets/img/thep_ep.jpg" alt="">
+                <%= image_tag noise.thumbnail.url(:medium) %>
               <% end %>
             </div>
             <div class="song-overview">
