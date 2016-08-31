@@ -11,6 +11,10 @@ body {
  color: $dark;
 }
 
+.active {
+  color: $primary-color;
+}
+
 .wrapper-wide {
  width: 90%;
  margin: 0 auto;
