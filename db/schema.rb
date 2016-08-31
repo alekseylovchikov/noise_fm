@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160831074228) do
+ActiveRecord::Schema.define(version: 20160831082736) do
 
   create_table "songs", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(version: 20160831074228) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "title"
+    t.text     "description"
+    t.string   "itunes"
+    t.string   "lastfm"
+    t.string   "website"
   end
 
   add_index "songs", ["email"], name: "index_songs_on_email", unique: true
