@@ -3,9 +3,15 @@
       <div class="wrapper-skinny">
           <h1><%= @song.title %></h1>
           <p class="description"><%= @song.description %></p>
-          <a href="#" class="subscribe">iTunes</a>
-          <a href="#" class="subscribe">Last.fm</a>
-          <a href="#" class="subscribe">Facebook</a>
+          <% unless @song.itunes.blank? %>
+              <a href="<%= @song.itunes %>" class="subscribe">iTunes</a>
+          <% end %>
+          <% unless @song.lastfm.blank? %>
+              <a href="<%= @song.lastfm %>" class="subscribe">Last.fm</a>
+          <% end %>
+          <% unless @song.website.blank? %>
+              <a href="<%= @song.website %>" class="subscribe">Website</a>
+          <% end %>
       </div>
   </div>
 
