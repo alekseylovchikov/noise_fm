@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160831110725) do
+ActiveRecord::Schema.define(version: 20160831114601) do
 
   create_table "noises", force: :cascade do |t|
     t.string   "title"
     t.integer  "song_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "description"
   end
 
   add_index "noises", ["song_id"], name: "index_noises_on_song_id"

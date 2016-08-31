@@ -3,21 +3,26 @@
       <div class="wrapper-skinny">
           <h1><%= @song.title %></h1>
           <p class="description"><%= @song.description %></p>
-          <% unless @song.itunes.blank? %>
-            <a href="<%= @song.itunes %>" class="subscribe">iTunes</a>
-          <% end %>
-          <% unless @song.lastfm.blank? %>
-            <a href="<%= @song.lastfm %>" class="subscribe">Last.fm</a>
-          <% end %>
-          <% unless @song.website.blank? %>
-            <a href="<%= @song.website %>" class="subscribe">Website</a>
-          <% end %>
+          <a href="#" class="subscribe">iTunes</a>
+          <a href="#" class="subscribe">Last.fm</a>
+          <a href="#" class="subscribe">Facebook</a>
       </div>
   </div>
+
   <div id="breadcrump">
     <%= link_to 'All Bands', songs_path %>
     <span>/</span>
-    <%= @song.title %>
+    <%= link_to @song.title, song_path(@song) %>
+    <span>/</span>
+    <%= @noise.title %>
+  </div>
+
+  <div id="song-content">
+    <div class="wrapper-skinny">
+      <img class="current-song-thumbnail" src="assets/img/thep_ep.jpg" alt="">
+      <h2><%= @noise.title %></h2>
+      <p class="description"><%= @noise.description %></p>
+    </div>
   </div>
 
   <div id="songs">
@@ -39,11 +44,4 @@
       </ul>
     </div>
   </div>
-</div>
-
-<div class="pagination">
-  <span class="prev-page disabled">Previous</span>
-  <em class="current">1</em>
-  <a href="#">2</a>
-  <a class="next-page" href="#">Next</a>
 </div>

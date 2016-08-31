@@ -1,0 +1,15 @@
+<div id="form" class="wrapper-skinny">
+  <h1>New Noise</h1>
+
+  <%= form_for ([@song, @noise]) do |f| %>
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+    <%= f.submit 'Create', class: 'btn btn-highlight btn-block' %>
+  <% end %>
+</div>
