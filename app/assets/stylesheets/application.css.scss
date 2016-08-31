@@ -1,6 +1,6 @@
 $white: #fff;
 $primary-color: #b13383;
-$dark: #343538;
+$dark: #3a3f50;
 $amount: 7.5%;
 $light: #EDEFF5;
 $alert: #f94c4c;
@@ -21,8 +21,7 @@ body {
   font-size: 2rem;
   background-color: $primary-color;
   color: $white;
-  padding: 8px;
-  opacity: .9;
+  padding: 16px;
   text-align: center;
 }
 
@@ -35,8 +34,7 @@ body {
   font-size: 2rem;
   background-color: $alert;
   color: $white;
-  padding: 8px;
-  opacity: .9;
+  padding: 16px;
   text-align: center;
 }
 

@@ -1,9 +1,9 @@
 <div id="links">
   <div class="wrapper-skinny">
     <ul>
-      <li><%= link_to 'Songs', authenticated_root_path %></li>
-      <li><%= link_to 'New Song', new_song_noise_path(song) %></li>
-      <li><%= link_to 'Account Settings', edit_song_registration_path %></li>
+      <li><%= link_to 'Songs', authenticated_root_path, class: params[:controller] == 'songs' && params[:action] == 'dashboard' ? 'current' : '' %></li>
+      <li><%= link_to 'New Song', new_song_noise_path(song), class: params[:controller] == 'noises' && params[:action] == 'new' ? 'current' : '' %></li>
+      <li><%= link_to 'Account Settings', edit_song_registration_path, class: params[:controller] == 'devise/registrations' && params[:action] == 'edit' ? 'current' : '' %></li>
       <li><%= link_to 'View Profile', song_path(current_song) %></li>
     </ul>
   </div>

@@ -1,6 +1,12 @@
-<div id="form" class="wrapper-skinny">
-  <h1>Edit Noise</h1>
+<div id="noise-show">
+  <div id="show-banner">
+    <div class="wrapper-skinny">
+      <h1>Edit: <%= @noise.title %> by <%= @song.title %></h1>
+    </div>
+  </div>
+</div>
 
+<div id="form" class="wrapper-skinny">
   <%= form_for ([@song, @noise]) do |f| %>
       <div class="field">
         <%= f.label :title %>

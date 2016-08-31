@@ -20,22 +20,26 @@ $(document).ready(function() {
   var alert = $('p.alert');
 
   alert.animate({
-    left: '50%'
+      left: '50%'
   }, 500, function() {
-    alert.animate({
-      opacity: 0
-    }, 3000, function() {
-      alert.remove();
-    });
+    setTimeout(function() {
+        alert.animate({
+            top: '-200px'
+        }, 300, function() {
+            alert.remove();
+        });
+    }, 2000);
   });
 
   notice.animate({
-    left: '50%'
+        left: '50%'
   }, 500, function() {
-    notice.animate({
-      opacity: 0
-    }, 3000, function() {
-      notice.remove();
-    });
+    setTimeout(function() {
+        notice.animate({
+            top: '-200px'
+        }, 300, function() {
+            notice.remove();
+        });
+    }, 2000);
   });
 });

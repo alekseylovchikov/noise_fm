@@ -17,12 +17,11 @@ class NoisesController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
     if @noise.update(noise_params)
-      redirect_to root_path
+      redirect_to song_noise_path(@song, @noise)
     else
       render :edit
     end
