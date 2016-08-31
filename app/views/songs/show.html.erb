@@ -1,0 +1,71 @@
+<div id="noise-show">
+  <div id="show-banner">
+      <div class="wrapper-skinny">
+          <h1><%= @song.title %></h1>
+          <p class="description"><%= @song.description %></p>
+          <% unless @song.itunes.blank? %>
+            <a href="<%= @song.itunes %>" class="subscribe">iTunes</a>
+          <% end %>
+          <% unless @song.lastfm.blank? %>
+            <a href="<%= @song.lastfm %>" class="subscribe">Last.fm</a>
+          <% end %>
+          <% unless @song.website.blank? %>
+            <a href="<%= @song.website %>" class="subscribe">Website</a>
+          <% end %>
+      </div>
+  </div>
+  <div id="breadcrump">
+    <%= link_to 'All Bands', songs_path %>
+    <span>/</span>
+    <%= @song.title %>      
+  </div>
+
+  <div id="songs">
+      <div class="wrapper-skinny">
+          <ul class="cf">
+              <li class="cf">
+                  <div class="song-thumbnail">
+                      <a href="song.html">
+                          <img src="assets/img/thep_ep.jpg" alt="">
+                      </a>
+                  </div>
+                  <div class="song-overview">
+                      <h2><a href="song.html">The Night Is My Friend EP</a></h2>
+                      <p class="description">All rights of the producer and owner of the recorded work reserved. Unauthorised copying, hiring, renting, public performance and broadcasting of this record is prohibited.</p>
+                  </div>
+              </li>
+
+              <li class="cf">
+                  <div class="song-thumbnail">
+                      <a href="song.html">
+                          <img src="assets/img/wild_frontier-sleeve.jpg" alt="">
+                      </a>
+                  </div>
+                  <div class="song-overview">
+                      <h2><a href="song.html">Wild Frontier</a></h2>
+                      <p class="description">All rights of the producer and owner of the recorded work reserved. Unauthorised copying, hiring, renting, public performance and broadcasting of this record is prohibited.</p>
+                  </div>
+              </li>
+
+              <li class="cf">
+                  <div class="song-thumbnail">
+                      <a href="song.html">
+                          <img src="assets/img/omen.jpg" alt="">
+                      </a>
+                  </div>
+                  <div class="song-overview">
+                      <h2><a href="song.html">Omen EP</a></h2>
+                      <p class="description">All rights of the producer and owner of the recorded work reserved. Unauthorised copying, hiring, renting, public performance and broadcasting of this record is prohibited.</p>
+                  </div>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+<div class="pagination">
+  <span class="prev-page disabled">Previous</span>
+  <em class="current">1</em>
+  <a href="#">2</a>
+  <a class="next-page" href="#">Next</a>
+</div>

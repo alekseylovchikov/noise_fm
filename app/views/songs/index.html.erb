@@ -1,0 +1,28 @@
+<div id="banner" class="songs-banner">
+    <h1>Discover your new favorite bands</h1>
+</div>
+
+<div id="noises" class="cf">
+    <div class="wrapper">
+        <ul>
+          <% @songs.each do |song| %>
+            <%= link_to song do %>
+              <li>
+                <img src="assets/img/pvd.jpg" alt="<%= song.title %>">
+                <div class="noise-overview">
+                  <h2><%= song.title %></h2>
+                  <p class="noise-count">1 noises</p>
+                </div>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+    </div>
+</div>
+
+<div class="pagination">
+    <span class="prev-page disabled">Previous</span>
+    <em class="current">1</em>
+    <a href="#">2</a>
+    <a class="next-page" href="#">Next</a>
+</div>

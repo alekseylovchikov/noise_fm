@@ -1,16 +1,16 @@
 <div id="background">
   <header class="cf">
     <div class="wrapper-wide">
-      <%= link_to 'Noise.FM', root_path, id: 'logo' %>
+      <%= link_to 'BAND.FM', root_path, id: 'logo' %>
         <nav>
           <ul>
             <% unless song_signed_in? %>
-              <li><a href="#">Explore</a></li>
+              <li><%= link_to 'Explore', songs_path %></li>
               <li><%= link_to 'Sign In', new_song_session_path %></li>
-              <li><%= link_to 'Create a Noises', new_song_registration_path %></li>
+              <li><%= link_to 'Create a Profile', new_song_registration_path %></li>
             <% else %>
               <li><a href="#">Dashboard</a></li>
-              <li><a href="#">Explore</a></li>
+              <li><%= link_to 'Explore', songs_path %></li>
               <li><%= link_to 'Sign Out', destroy_song_session_path, method: :delete %></li>
             <% end %>
           </ul>
@@ -19,7 +19,9 @@
   </header>
   <div class="wrapper-skinny">
     <h1>Discover your new favorite<br /><span id="noise-color">noise</span>, or create your own.</h1>
-    <%= link_to 'Create a Noises', new_song_registration_path, class: 'btn btn-highlight' %>
-    <a href="#" class="btn btn-white">Explore</a>
+    <% unless song_signed_in? %>
+      <%= link_to 'Create a Profile', new_song_registration_path, class: 'btn btn-highlight' %>
+    <% end %>
+    <%= link_to 'Explore', songs_path, class: 'btn btn-white' %>
   </div>
 </div>

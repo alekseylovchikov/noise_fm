@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NOISE.FM</title>
+    <title>BAND.FM</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -17,16 +17,16 @@
     <% unless params[:controller] == 'pages' && params[:action] == 'welcome' %>
       <header class="cf" id="main-header">
         <div class="wrapper-wide">
-          <%= link_to 'Noise.FM', root_path, id: 'logo' %>
+          <%= link_to 'BAND.FM', root_path, id: 'logo' %>
             <nav>
               <ul>
                 <% unless song_signed_in? %>
-                  <li><a href="#">Explore</a></li>
+                  <li><%= link_to 'Explore', songs_path %></li>
                   <li><%= link_to 'Sign In', new_song_session_path %></li>
-                  <li><%= link_to 'Create a Noises', new_song_registration_path %></li>
+                  <li><%= link_to 'Create a Profile', new_song_registration_path %></li>
                 <% else %>
                   <li><a href="#">Dashboard</a></li>
-                  <li><a href="#">Explore</a></li>
+                  <li><%= link_to 'Explore', songs_path %></li>
                   <li><%= link_to 'Sign Out', destroy_song_session_path, method: :delete %></li>
                 <% end %>
               </ul>
