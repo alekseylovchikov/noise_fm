@@ -1,0 +1,146 @@
+$white: #fff;
+$primary-color: #b13383;
+$dark: #232323;
+$amount: 7.5%;
+$light: #EDEFF5;
+
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,500i';
+
+body {
+ font-family: 'Roboto', 'Arial', 'Ubuntu', sans-serif;
+ color: $dark;
+}
+
+.wrapper-wide {
+ width: 90%;
+ margin: 0 auto;
+}
+
+.wrapper {
+ width: 80%;
+ margin: 0 auto;
+}
+
+.wrapper-skinny {
+ width: 50%;
+ margin: 0 auto;
+}
+
+.cf::before, .cf::after {
+ content: " ";
+ display: table;
+}
+
+.cf::after {
+ clear: both;
+}
+
+.btn {
+ color: $white;
+ text-decoration: none;
+ font-size: 1rem;
+ padding: 1rem 2rem;
+ border-radius: 2rem;
+ outline: none;
+ border: none;
+ text-transform: uppercase;
+ display: inline-block;
+ min-width: 7.5rem;
+}
+
+.btn-highlight {
+ background-color: $primary-color;
+ transition: background-color .5s ease-in-out;
+ &:hover {
+   background-color: darken($primary-color, $amount);
+ }
+}
+
+.btn-white {
+ background-color: $white;
+ transition: background-color .5s ease-in-out;
+ color: $dark;
+ &:hover {
+   background-color: darken($white, $amount);
+ }
+}
+
+.btn-block {
+ display: block;
+ margin: 0 auto;
+}
+
+.field {
+ margin: .5rem 0 1.5rem 0;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+ width: 100%;
+ height: 2.5rem;
+ padding: .25rem 1rem;
+ background-color: $light;
+ border: 1px solid darken($light, 5%);
+ border-radius: .35rem;
+ margin-top: .5rem;
+ &:focus {
+   outline: 0;
+ }
+}
+
+textarea {
+ min-height: 8rem;
+ margin-top: .5rem !important;
+}
+
+input[type="submit"] {
+ cursor: pointer;
+}
+
+#form {
+ padding: 0 0 5rem 0;
+}
+
+.pagination::before, .pagination::after {
+ content: " ";
+ display: table;
+}
+
+.pagination::after {
+ clear: both;
+}
+
+.pagination {
+ text-align: center;
+ margin: 1rem 0 5rem 0;
+ a, .prev-page, .current, .next-page {
+   padding: .75rem 1rem;
+   margin: 0 .10rem;
+   border-radius: .15rem;
+   line-height: 1.25rem;
+   text-decoration: none;
+   background-color: #EDEFF5;
+   font-weight: 700;
+   font-size: .7rem;
+   font-style: normal;
+   color: $dark;
+   &:hover {
+     background-color: $primary-color;
+     color: $white;
+   }
+ }
+ .current {
+   background-color: $primary-color;
+   color: $white;
+ }
+ .disabled {
+   color: #a0a0a0;
+   &:hover {
+     color: #a0a0a0;
+     background-color: #EDEFF5;
+   }
+ }
+}
+
+@import 'normalize';
+@import 'pages';
+// @import 'noises';
