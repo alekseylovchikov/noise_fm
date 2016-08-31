@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160831114601) do
+ActiveRecord::Schema.define(version: 20160831175226) do
 
   create_table "noises", force: :cascade do |t|
     t.string   "title"
@@ -41,6 +41,10 @@ ActiveRecord::Schema.define(version: 20160831114601) do
     t.string   "itunes"
     t.string   "lastfm"
     t.string   "website"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   add_index "songs", ["email"], name: "index_songs_on_email", unique: true

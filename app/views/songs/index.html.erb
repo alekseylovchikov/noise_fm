@@ -8,7 +8,8 @@
           <% @songs.each do |song| %>
             <%= link_to song do %>
               <li>
-                <img src="assets/img/pvd.jpg" alt="<%= song.title %>">
+                <%= image_tag song.thumbnail.url(:medium) %>
+                <!--<img src="assets/img/pvd.jpg" alt="<%= song.title %>">-->
                 <div class="noise-overview">
                   <h2><%= song.title %></h2>
                   <p class="noise-count">1 noises</p>
