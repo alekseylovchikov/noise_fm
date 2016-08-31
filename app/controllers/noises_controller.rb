@@ -41,7 +41,7 @@ class NoisesController < ApplicationController
   private
 
   def noise_params
-    params.require(:noise).permit(:title, :description)
+    params.require(:noise).permit(:title, :description, :thumbnail)
   end
 
   def find_song
