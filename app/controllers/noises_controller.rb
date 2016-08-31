@@ -1,5 +1,6 @@
 class NoisesController < ApplicationController
-  before_action :authenticate_song!
+  before_action :authenticate_song!, except: [:show]
+  before_filter :require_permission
   before_action :find_song
   before_action :find_noise, only: [:show, :destroy, :edit, :update]
 
@@ -49,5 +50,12 @@ class NoisesController < ApplicationController
 
   def find_noise
     @noise = Noise.find(params[:id])
+  end
+
+  def require_permission
+    @song = Song.find(params[:song_id])
+    if current_song != @song
+      redirect_to root_path, notice: 'Sorry, you\'re not allowed to view that page.'
+    end
   end
 end
