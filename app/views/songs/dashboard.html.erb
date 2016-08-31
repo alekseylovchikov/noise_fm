@@ -1,20 +1,11 @@
 <div id="noise-show">
   <div id="show-banner">
     <div class="wrapper-skinny">
-      <h1><%= @song.title %>></h1>
+      <h1><%= @song.title %></h1>
     </div>
   </div>
 
-  <div id="links">
-    <div class="wrapper-skinny">
-      <ul>
-        <li class="current">Songs</li>
-        <li><a href="#">New Song</a></li>
-        <li><%= link_to 'Account Settings', edit_song_registration_path %></li>
-        <li><a href="#">View Song</a></li>
-      </ul>
-    </div>
-  </div>
+  <%= render 'layouts/links', song: @song %>
 
   <div id="songs">
     <div class="wrapper-skinny">
