@@ -11,7 +11,7 @@
                 <%= image_tag song.thumbnail.url(:medium) %>
                 <div class="noise-overview">
                   <h2><%= song.title %></h2>
-                  <p class="noise-count">1 noises</p>
+                  <p class="noise-count"><%= pluralize(song.noises.count, 'noise') if song.noises %></p>
                 </div>
               </li>
             <% end %>
